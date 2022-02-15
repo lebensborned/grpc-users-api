@@ -3,6 +3,7 @@
 
 # Stack
 
+- Golang
 - Apache Kafka
 - Docker, docker-compose
 - Redis

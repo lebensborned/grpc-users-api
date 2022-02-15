@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "./api";
+
+service UserProfiles {
+
+    rpc CreateUserProfile (CreateUserProfileRequest) returns (UserProfile) {}
+    
+    rpc DeleteUserProfile (DeleteUserProfileRequest) returns (EmptyReq) {}
+
+    rpc ListUserProfiles (EmptyReq) returns (ListUserProfilesResponse) {}
+
+}
+
+message UserProfile {
+    uint32 id = 1;
+    string name = 2;
+    int32 age = 3;
+}
+
+message CreateUserProfileRequest {
+    UserProfile user_profile = 1;
+}
+
+message DeleteUserProfileRequest {
+    uint32 id = 1;
+}
+
+message EmptyReq {}
+
+message ListUserProfilesResponse {
+    repeated UserProfile profiles = 1;
+}

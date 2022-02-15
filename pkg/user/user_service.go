@@ -47,11 +47,6 @@ func (s *UserServer) DeleteUserProfile(ctx context.Context, req *api.DeleteUserP
 	return &api.EmptyReq{}, nil
 }
 func (s *UserServer) ListUserProfiles(ctx context.Context, req *api.EmptyReq) (*api.ListUserProfilesResponse, error) {
-	/*userlist := []*api.UserProfile{}
-	err := s.DB.Model(&api.UserProfile{}).Limit(100).Find(&userlist).Error
-	if err != nil {
-		return &api.ListUserProfilesResponse{}, err
-	}*/
 	u, err := s.Cache.GetUsers()
 	if err != nil {
 		return nil, err

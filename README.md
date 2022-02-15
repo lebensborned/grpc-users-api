@@ -8,7 +8,7 @@
 - Docker, docker-compose
 - Redis
 - Clickhouse DB
-- postgreSQL
+- postgreSQL + gORM
 - gRPC with .proto
 
 

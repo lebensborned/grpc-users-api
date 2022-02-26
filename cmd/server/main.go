@@ -38,7 +38,7 @@ func main() {
 		if err == nil {
 			break
 		}
-		log.Println("clickhouse reconnecting after 10 sec, error ocured: ", err)
+		log.Println("clickhouse reconnecting after 10 sec, error occured: ", err)
 		time.Sleep(10 * time.Second)
 	}
 	// waiting for postgres availability
@@ -47,7 +47,7 @@ func main() {
 		if err == nil {
 			break
 		}
-		log.Println("postgres reconnecting after 10 sec, error ocured: ", err)
+		log.Println("postgres reconnecting after 10 sec, error occured: ", err)
 		time.Sleep(10 * time.Second)
 	}
 	defer db.Close()
